@@ -22,17 +22,24 @@
 
 // initialize buttons and LEDs
 gpio_init:
-    /* Enable High Frequency Bus Clock for GPIO. */
-    LDR         R0, =CMU_HFBUSCLKEN0        // Get address of CMU HFBUSCLKEN0 register.
-    LDR         R1, [R0]                    // Get value of CMU HFBUSCLKEN0 register.
-    ORR         R1, 0x10                    // Enable GPIO HFBUSCLK.
-    STR			R1, [R0]                    // Write result back to CMU HFBUSCLKEN0 register.
+
     /* enable LED0R (PA12). */
     LDR         R0, =GPIO_PA_MODEH          // Get address of GPIO Port A MODEH register.
     LDR         R1, [R0]                    // Get value of GPIO Port A MODEH register.
     AND         R1, 0xFFF0FFFF              // Clear PA12 bit field.
     ORR         R1, 0x00040000              // Set PA12 to Push-pull output.
     STR         R1, [R0]                    // Write result back to GPIO Port A MODEH register.
+
+	LDR			R0, =GPIO_PA_DOUT
+	LDR			R1, [R0]
+	ORR			R1, 0xFFFFFFFF
+	STR			R1, [R0]
+
+	    /* Enable High Frequency Bus Clock for GPIO. */
+    LDR         R0, =CMU_HFBUSCLKEN0        // Get address of CMU HFBUSCLKEN0 register.
+    LDR         R1, [R0]                    // Get value of CMU HFBUSCLKEN0 register.
+    ORR         R1, 0x10                    // Enable GPIO HFBUSCLK.
+    STR			R1, [R0]                    // Write result back to CMU HFBUSCLKEN0 register.
     /* Enable LED0B (PA13). */
 
     /* Enable LED0G (PA14). */

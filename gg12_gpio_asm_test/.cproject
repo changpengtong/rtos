@@ -35,8 +35,8 @@
 								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.debug.builtin.189970666" name="Always branch to builtin functions (-fno-builtin)" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.debug.builtin" value="true" valueType="boolean"/>
 								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.optimization.level.351534788" name="Optimization Level" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.optimization.level" value="gnu.c.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.2023350460" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;/${workspace_loc}/lib/efm32gg12b/inc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/${workspace_loc}/lib/cmsis/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/gg12_gpio_asm_default/lib/efm32gg12b/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/gg12_gpio_asm_default/lib/cmsis/inc}&quot;"/>
 								</option>
 								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.def.symbols.1771763619" name="Defined symbols (-D)" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.def.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="EFM32GG12B810F1024GM64=1"/>
@@ -50,8 +50,8 @@
 							</tool>
 							<tool id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.base.141134159" name="GNU ARM Assembler" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.base">
 								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.includes.213859541" name="Include paths (-I)" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.includes" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;/${workspace_loc}/lib/efm32gg12b/inc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/${workspace_loc}/lib/cmsis/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/gg12_gpio_asm_default/lib/efm32gg12b/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/gg12_gpio_asm_default/lib/cmsis/inc}&quot;"/>
 								</option>
 								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.as.def.symbols.798827588" name="Defined symbols (-D)" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.as.def.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="EFM32GG12B810F1024GM64=1"/>
