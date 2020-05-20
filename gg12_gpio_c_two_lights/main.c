@@ -57,7 +57,7 @@ void delay (unsigned long count_value) {
  */
 int main (void) {
     // Initialize desired GPIO ports.
-    unsigned long count_value = gpio_init(1, 1, 1, 1, 1, 1, 0);
+    unsigned long count_value = gpio_init(1, 1, 1, 1, 1, 1, 1);
     // Loop
     while(1) {
         // Delay before doing anything with GPIO.
