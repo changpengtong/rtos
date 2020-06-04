@@ -8,37 +8,37 @@
 
 void state00 () {
 	GPIO->P[0].DOUT |= 0xFFFF;
-	GPIO->P[0].DOUT ^= 0x1000;
+	GPIO->P[0].DOUT ^= 0x1000;             // R
 }
 
 void state01 () {
 	GPIO->P[0].DOUT |= 0xFFFF;
-	GPIO->P[0].DOUT ^= 0x2000;
+	GPIO->P[0].DOUT ^= 0x2000;             // B
 }
 
 void state02 () {
 	GPIO->P[0].DOUT |= 0xFFFF;
-	GPIO->P[0].DOUT ^= 0x4000;
+	GPIO->P[0].DOUT ^= 0x4000;             // G
 }
 
 void state03 () {
 	GPIO->P[0].DOUT |= 0xFFFF;
-	GPIO->P[0].DOUT ^= 0x3000;
+	GPIO->P[0].DOUT ^= 0x3000;             // R + B
 }
 
 void state04 () {
 	GPIO->P[0].DOUT |= 0xFFFF;
-	GPIO->P[0].DOUT ^= 0x5000;
+	GPIO->P[0].DOUT ^= 0x5000;             // R + G
 }
 
 void state05 () {
 	GPIO->P[0].DOUT |= 0xFFFF;
-	GPIO->P[0].DOUT ^= 0x6000;
+	GPIO->P[0].DOUT ^= 0x6000;             // B + G
 }
 
 void state06 () {
 	GPIO->P[0].DOUT |= 0xFFFF;
-	GPIO->P[0].DOUT ^= 0x7000;
+	GPIO->P[0].DOUT ^= 0x7000;             // R + B + G
 }
 
 void state07 () {
@@ -51,21 +51,21 @@ void state10 () {
 	GPIO->P[3].DOUT |= 0xFFFF;
 	GPIO->P[4].DOUT |= 0xFFFF;
 	GPIO->P[5].DOUT |= 0xFFFF;
-	GPIO->P[3].DOUT ^= 0x0040;
+	GPIO->P[3].DOUT ^= 0x0040;             // R
 }
 
 void state11 () {
 	GPIO->P[3].DOUT |= 0xFFFF;
 	GPIO->P[4].DOUT |= 0xFFFF;
 	GPIO->P[5].DOUT |= 0xFFFF;
-	GPIO->P[4].DOUT ^= 0x1000;
+	GPIO->P[4].DOUT ^= 0x1000;             // B
 }
 
 void state12 () {
 	GPIO->P[3].DOUT |= 0xFFFF;
 	GPIO->P[4].DOUT |= 0xFFFF;
 	GPIO->P[5].DOUT |= 0xFFFF;
-	GPIO->P[5].DOUT ^= 0x1000;
+	GPIO->P[5].DOUT ^= 0x1000;             // G
 }
 
 void state13 () {
