@@ -115,7 +115,7 @@ void task0 (void) {
         if (state == 3) state = 0;
 
         time++;
-        if (time > 2) {
+        if (time > 1) {
         	time = 0;
         	context_switch();
         }
@@ -176,7 +176,7 @@ void task1 (void) {
 
 
         time++;
-        if (time > 2) {
+        if (time > 1) {
         	time = 0;
         	context_switch();
         }
