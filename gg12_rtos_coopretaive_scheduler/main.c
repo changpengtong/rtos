@@ -117,45 +117,44 @@ void task0 (void) {
         time++;
         if (time > 2) {
         	time = 0;
-        	break;
+        	context_switch();
         }
     }
-    context_switch();
 }
 
 void task1 (void) {
     // Enable GPIO HFBUSCLK.
-    CMU->HFBUSCLKEN0 |= 0x10;
-    // Clear PA12 bit field.
-    // GPIO_PD_MODEL
-    GPIO->P[0].MODEH &= 0xFFF0FFFF;
-    GPIO->P[0].MODEH |= 0x00040000;
-
-    GPIO->P[0].MODEH &= 0xFF0FFFFF;
-    GPIO->P[0].MODEH |= 0x00400000;
-
-    GPIO->P[0].MODEH &= 0xF0FFFFFF;
-    GPIO->P[0].MODEH |= 0x04000000;
-
-    GPIO->P[3].MODEL &= 0xF0FFFFFF;
-    GPIO->P[3].MODEL |= 0x04000000;
-
-    GPIO->P[4].MODEH &= 0xFFF0FFFF;
-    GPIO->P[4].MODEH |= 0x00040000;
-
-    GPIO->P[5].MODEH &= 0xFFF0FFFF;
-    GPIO->P[5].MODEH |= 0x00040000;
-
-    GPIO->P[3].MODEL &= 0xFF0FFFFF;
-    GPIO->P[3].MODEL |= 0x00100000;
-
-    GPIO->P[3].MODEH &= 0xFFFFFFF0;
-    GPIO->P[3].MODEH |= 0x00000001;
-
-    GPIO->P[0].DOUT |= 0xFFFFFFFF;
-    GPIO->P[3].DOUT |= 0xFFFFFFFF;
-    GPIO->P[4].DOUT |= 0xFFFFFFFF;
-    GPIO->P[5].DOUT |= 0xFFFFFFFF;
+//    CMU->HFBUSCLKEN0 |= 0x10;
+//    // Clear PA12 bit field.
+//    // GPIO_PD_MODEL
+//    GPIO->P[0].MODEH &= 0xFFF0FFFF;
+//    GPIO->P[0].MODEH |= 0x00040000;
+//
+//    GPIO->P[0].MODEH &= 0xFF0FFFFF;
+//    GPIO->P[0].MODEH |= 0x00400000;
+//
+//    GPIO->P[0].MODEH &= 0xF0FFFFFF;
+//    GPIO->P[0].MODEH |= 0x04000000;
+//
+//    GPIO->P[3].MODEL &= 0xF0FFFFFF;
+//    GPIO->P[3].MODEL |= 0x04000000;
+//
+//    GPIO->P[4].MODEH &= 0xFFF0FFFF;
+//    GPIO->P[4].MODEH |= 0x00040000;
+//
+//    GPIO->P[5].MODEH &= 0xFFF0FFFF;
+//    GPIO->P[5].MODEH |= 0x00040000;
+//
+//    GPIO->P[3].MODEL &= 0xFF0FFFFF;
+//    GPIO->P[3].MODEL |= 0x00100000;
+//
+//    GPIO->P[3].MODEH &= 0xFFFFFFF0;
+//    GPIO->P[3].MODEH |= 0x00000001;
+//
+//    GPIO->P[0].DOUT |= 0xFFFFFFFF;
+//    GPIO->P[3].DOUT |= 0xFFFFFFFF;
+//    GPIO->P[4].DOUT |= 0xFFFFFFFF;
+//    GPIO->P[5].DOUT |= 0xFFFFFFFF;
     // Loop
 
     // set timer to break;
@@ -179,8 +178,7 @@ void task1 (void) {
         time++;
         if (time > 2) {
         	time = 0;
-        	break;
+        	context_switch();
         }
     }
-    context_switch();
 }
